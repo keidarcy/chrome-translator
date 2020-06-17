@@ -5,8 +5,15 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["script.js"],
-      "css": ["styles.css"]
+      "js": ["dist/app.js"],
+      "css": ["dist/styles.css"]
     }
-  ]
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "translate this page",
+    "default_icon": {
+      "32": "images/icon32.png"
+    }
+  }
 }

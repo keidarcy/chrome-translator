@@ -2,9 +2,11 @@
   "name": "chrometr",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "serve": "webpack-dev-server",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch"
   },
   "keywords": [
     "chrome extension",
@@ -13,8 +15,21 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@google-cloud/translate": "^6.0.0",
     "axios": "^0.19.2",
+    "babel-loader": "^8.1.0",
+    "core-js": "3",
+    "cross-env": "^7.0.2",
+    "google-translate-api-browser": "^1.1.71",
+    "laravel-mix": "^5.0.4",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "google-translate-api": "^2.3.0",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-dev-server": "^3.11.0"
   }
 }
