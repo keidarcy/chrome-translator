@@ -18,7 +18,7 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "@google-cloud/translate": "^6.0.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-loader": "^8.1.0",
     "core-js": "3",
     "cross-env": "^7.0.2",
